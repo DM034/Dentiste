@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="PostgreSQL" id="Project-7f0" database="PostgreSQL" >
+	<schema name="public" >
+		<comment><![CDATA[standard public schema]]></comment>
+		<table name="dent" >
+			<column name="id" type="integer" jt="4" mandatory="y" />
+			<column name="nom" type="varchar" jt="12" />
+			<column name="code" type="varchar" jt="12" />
+			<column name="id_type" type="integer" jt="4" />
+			<index name="pk_dent" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="unq_dent_id_type" unique="UNIQUE_KEY" >
+				<column name="id_type" />
+			</index>
+			<fk name="fk_dent_dent_patient" to_schema="public" to_table="dent_patient" >
+				<fk_column name="id" pk="id_dent" />
+			</fk>
+		</table>
+		<table name="dent_patient" >
+			<column name="id" type="integer" jt="4" mandatory="y" />
+			<column name="id_patient" type="integer" jt="4" />
+			<column name="id_dent" type="integer" jt="4" />
+			<column name="etat" type="integer" jt="4" />
+			<index name="pk_dent_patient" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="unq_dent_patient_id_patient" unique="UNIQUE_KEY" >
+				<column name="id_patient" />
+			</index>
+			<index name="unq_dent_patient_id_dent" unique="UNIQUE_KEY" >
+				<column name="id_dent" />
+			</index>
+		</table>
+		<table name="genre" >
+			<column name="id" type="integer" jt="4" mandatory="y" />
+			<column name="nom" type="varchar" jt="12" />
+			<index name="pk_genre" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_genre_patient" to_schema="public" to_table="patient" >
+				<fk_column name="id" pk="id_genre" />
+			</fk>
+		</table>
+		<table name="patient" spec="" >
+			<column name="id" type="integer" jt="4" mandatory="y" />
+			<column name="nom" type="varchar" jt="12" />
+			<column name="dtn" type="date" jt="91" />
+			<column name="id_genre" type="integer" jt="4" />
+			<index name="pk_patient" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="unq_patient_id_genre" unique="UNIQUE_KEY" >
+				<column name="id_genre" />
+			</index>
+			<fk name="fk_patient_traitement_patient" to_schema="public" to_table="traitement_patient" >
+				<fk_column name="id" pk="id_patient" />
+			</fk>
+			<fk name="fk_patient_dent_patient" to_schema="public" to_table="dent_patient" >
+				<fk_column name="id" pk="id_patient" />
+			</fk>
+		</table>
+		<table name="rdv" spec="" >
+			<column name="id" type="integer" jt="4" mandatory="y" />
+			<column name="dateheure" type="timestamp" jt="93" />
+			<column name="id_traitement_patient" type="integer" jt="4" />
+			<index name="pk_rdv" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="unq_rdv_id_traitement_patient" unique="UNIQUE_KEY" >
+				<column name="id_traitement_patient" />
+			</index>
+		</table>
+		<table name="traitement" spec="" >
+			<column name="id" type="integer" jt="4" mandatory="y" />
+			<column name="nom" type="varchar" jt="12" />
+			<column name="valeur" type="integer" jt="4" />
+			<column name="cout" type="double precision" jt="3" />
+			<index name="pk_traitement" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_traitement_traitement_patient" to_schema="public" to_table="traitement_patient" >
+				<fk_column name="id" pk="id_traitement" />
+			</fk>
+		</table>
+		<table name="traitement_patient" spec="" >
+			<column name="id" type="integer" jt="4" mandatory="y" />
+			<column name="id_patient" type="integer" jt="4" />
+			<column name="id_traitement" type="integer" jt="4" />
+			<column name="nombre" type="integer" jt="4" />
+			<index name="pk_traitement_patient" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<index name="unq_traitement_patient_id_patient" unique="UNIQUE_KEY" >
+				<column name="id_patient" />
+			</index>
+			<index name="unq_traitement_patient_id_traitement" unique="UNIQUE_KEY" >
+				<column name="id_traitement" />
+			</index>
+			<fk name="fk_traitement_patient_rdv" to_schema="public" to_table="rdv" >
+				<fk_column name="id" pk="id_traitement_patient" />
+			</fk>
+		</table>
+		<table name="type" spec="" >
+			<column name="id" type="integer" jt="4" mandatory="y" />
+			<column name="nom" type="varchar" jt="12" />
+			<column name="valeur" type="integer" jt="4" />
+			<index name="pk_tbl" unique="PRIMARY_KEY" >
+				<column name="id" />
+			</index>
+			<fk name="fk_type_dent" to_schema="public" to_table="dent" >
+				<fk_column name="id" pk="id_type" />
+			</fk>
+		</table>
+	</schema>
+	<layout name="Main Layout" id="Layout-13d8" show_relation="columns" >
+		<entity schema="public" name="dent" color="C1D8EE" x="561" y="68" />
+		<entity schema="public" name="dent_patient" color="C1D8EE" x="408" y="272" />
+		<entity schema="public" name="genre" color="C1D8EE" x="289" y="119" />
+		<entity schema="public" name="patient" color="C1D8EE" x="68" y="204" />
+		<entity schema="public" name="rdv" color="C1D8EE" x="561" y="595" />
+		<entity schema="public" name="traitement" color="C1D8EE" x="765" y="221" />
+		<entity schema="public" name="traitement_patient" color="C1D8EE" x="221" y="561" />
+		<entity schema="public" name="type" color="C1D8EE" x="629" y="289" />
+		<callout x="51" y="51" pointer="Round" >
+			<comment><![CDATA[This is a layout. Create new tables by right-clicking the layout. 
+
+Edit tables by double-clicking the table header.]]></comment>
+		</callout>
+	</layout>
+</project>

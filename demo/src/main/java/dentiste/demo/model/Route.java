@@ -61,10 +61,11 @@ public class Route extends JDBC {
 
         if(budget > 0){
 
-            if(etat <= 9 && etat >= 0){
+            if(etat != 10){
                 budget = budget - traiRep;
                 System.out.println("budgetNet = "+budget+" etat ="+etat);
                 if(budget >= 0){
+                    budget = budget - traiRep;
                     route.update("etat", "10");
                     budg.update("budget", String.valueOf(budget));
                 }

@@ -25,7 +25,7 @@ public class Rl extends JDBC {
     int etat;
 
     public LinkedList<Cout_traitementLalana> getCoutTraitementLalanaByIdTraitement(int idTraitement)throws Exception{
-        LinkedList<Cout_traitementLalana> dp = new Cout_traitementLalana().select("where id_traitement = "+idTraitement+" and id_lalana = "+this.id);
+        LinkedList<Cout_traitementLalana> dp = new Cout_traitementLalana().select("where id_traitement = "+idTraitement+" and id_lalana = "+this.id_lalana);
         return dp;
     }
 

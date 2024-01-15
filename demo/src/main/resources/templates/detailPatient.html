@@ -175,6 +175,7 @@
                 <div class="table-responsive text-nowrap">
                 <h4 th:text="${actbq.getNom()}"></h4>
                 <h4 th:text="${acb.getBudget()}"> Ariary</h4>
+                <input type="text" name="idPatient" id="" th:value="${actbq.getId()}">
                   <table class="table">  
                     <tr >
                           <td th:each="dph : ${dph}"><h4 th:text="${dph.getCode()}"></h4></td>

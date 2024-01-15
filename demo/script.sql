@@ -141,23 +141,23 @@ insert into dent values(32,'BMolaire 6','B16',2);
 
 
 insert into dent_patient values(1,1,1,10);
-insert into dent_patient values(2,1,2,5);
-insert into dent_patient values(3,1,3,5);
+insert into dent_patient values(2,1,2,10);
+insert into dent_patient values(3,1,3,10);
 insert into dent_patient values(4,1,4,10);
 insert into dent_patient values(5,1,5,10);
-insert into dent_patient values(6,1,6,0);
+insert into dent_patient values(6,1,6,10);
 insert into dent_patient values(7,1,7,10);
-insert into dent_patient values(8,1,8,9);
-insert into dent_patient values(9,1,9,8);
+insert into dent_patient values(8,1,8,0);
+insert into dent_patient values(9,1,9,2);
 insert into dent_patient values(10,1,10,10);
-insert into dent_patient values(11,1,11,5);
+insert into dent_patient values(11,1,11,10);
 insert into dent_patient values(12,1,12,10);
-insert into dent_patient values(13,1,13,3);
-insert into dent_patient values(14,1,14,0);
+insert into dent_patient values(13,1,13,10);
+insert into dent_patient values(14,1,14,10);
 insert into dent_patient values(15,1,15,10);
-insert into dent_patient values(16,1,16,0);
+insert into dent_patient values(16,1,16,10);
 
-insert into dent_patient values(17,1,17,10);
+insert into dent_patient values(17,1,17,4);
 insert into dent_patient values(18,1,18,10);
 insert into dent_patient values(19,1,19,10);
 insert into dent_patient values(20,1,20,10);
@@ -165,14 +165,16 @@ insert into dent_patient values(21,1,21,10);
 insert into dent_patient values(22,1,22,10);
 insert into dent_patient values(23,1,23,10);
 insert into dent_patient values(24,1,24,10);
-insert into dent_patient values(25,1,25,0);
-insert into dent_patient values(26,1,26,0);
+insert into dent_patient values(25,1,25,10);
+insert into dent_patient values(26,1,26,10);
 insert into dent_patient values(27,1,27,10);
 insert into dent_patient values(28,1,28,10);
 insert into dent_patient values(29,1,29,10);
-insert into dent_patient values(30,1,30,4);
-insert into dent_patient values(31,1,31,2);
+insert into dent_patient values(30,1,30,10);
+insert into dent_patient values(31,1,31,10);
 insert into dent_patient values(32,1,32,10);
+
+delete from dent_patient;
 
 insert into traitement values(1,'Nettoyage', 0, 0);
 insert into traitement values(2,'Reparation', 5, 0);
@@ -213,106 +215,111 @@ insert into cout_traitement values(default,1,30,1000);
 insert into cout_traitement values(default,1,31,1000);
 insert into cout_traitement values(default,1,32,1000);
 
-insert into cout_traitement values(default,2,1,5000);
-insert into cout_traitement values(default,2,2,5000);
-insert into cout_traitement values(default,2,3,5000);
-insert into cout_traitement values(default,2,4,5000);
-insert into cout_traitement values(default,2,5,5000);
-insert into cout_traitement values(default,2,6,5000);
-insert into cout_traitement values(default,2,7,5000);
-insert into cout_traitement values(default,2,8,5000);
-insert into cout_traitement values(default,2,9,5000);
-insert into cout_traitement values(default,2,10,5000);
-insert into cout_traitement values(default,2,11,5000);
-insert into cout_traitement values(default,2,12,5000);
-insert into cout_traitement values(default,2,13,5000);
-insert into cout_traitement values(default,2,14,5000);
-insert into cout_traitement values(default,2,15,5000);
-insert into cout_traitement values(default,2,16,5000);
-insert into cout_traitement values(default,2,17,5000);
-insert into cout_traitement values(default,2,18,5000);
-insert into cout_traitement values(default,2,19,5000);
-insert into cout_traitement values(default,2,20,5000);
-insert into cout_traitement values(default,2,21,5000);
-insert into cout_traitement values(default,2,22,5000);
-insert into cout_traitement values(default,2,23,5000);
-insert into cout_traitement values(default,2,24,5000);
-insert into cout_traitement values(default,2,25,5000);
-insert into cout_traitement values(default,2,26,5000);
-insert into cout_traitement values(default,2,27,5000);
-insert into cout_traitement values(default,2,28,5000);
-insert into cout_traitement values(default,2,29,5000);
-insert into cout_traitement values(default,2,30,5000);
-insert into cout_traitement values(default,2,31,5000);
-insert into cout_traitement values(default,2,32,5000);
+insert into cout_traitement values(default,2,1,2000);
+insert into cout_traitement values(default,2,2,2000);
+insert into cout_traitement values(default,2,3,2000);
+insert into cout_traitement values(default,2,4,2000);
+insert into cout_traitement values(default,2,5,2000);
+insert into cout_traitement values(default,2,6,2000);
+insert into cout_traitement values(default,2,7,2000);
+insert into cout_traitement values(default,2,8,2000);
+insert into cout_traitement values(default,2,9,2000);
+insert into cout_traitement values(default,2,10,2000);
+insert into cout_traitement values(default,2,11,2000);
+insert into cout_traitement values(default,2,12,2000);
+insert into cout_traitement values(default,2,13,2000);
+insert into cout_traitement values(default,2,14,2000);
+insert into cout_traitement values(default,2,15,2000);
+insert into cout_traitement values(default,2,16,2000);
+insert into cout_traitement values(default,2,17,2000);
+insert into cout_traitement values(default,2,18,2000);
+insert into cout_traitement values(default,2,19,2000);
+insert into cout_traitement values(default,2,20,2000);
+insert into cout_traitement values(default,2,21,2000);
+insert into cout_traitement values(default,2,22,2000);
+insert into cout_traitement values(default,2,23,2000);
+insert into cout_traitement values(default,2,24,2000);
+insert into cout_traitement values(default,2,25,2000);
+insert into cout_traitement values(default,2,26,2000);
+insert into cout_traitement values(default,2,27,2000);
+insert into cout_traitement values(default,2,28,2000);
+insert into cout_traitement values(default,2,29,2000);
+insert into cout_traitement values(default,2,30,2000);
+insert into cout_traitement values(default,2,31,2000);
+insert into cout_traitement values(default,2,32,2000);
 
-insert into cout_traitement values(default,3,1,10000);
-insert into cout_traitement values(default,3,2,10000);
-insert into cout_traitement values(default,3,3,10000);
-insert into cout_traitement values(default,3,4,10000);
-insert into cout_traitement values(default,3,5,10000);
-insert into cout_traitement values(default,3,6,10000);
-insert into cout_traitement values(default,3,7,10000);
-insert into cout_traitement values(default,3,8,10000);
-insert into cout_traitement values(default,3,9,10000);
-insert into cout_traitement values(default,3,10,10000);
-insert into cout_traitement values(default,3,11,10000);
-insert into cout_traitement values(default,3,12,10000);
-insert into cout_traitement values(default,3,13,10000);
-insert into cout_traitement values(default,3,14,10000);
-insert into cout_traitement values(default,3,15,10000);
-insert into cout_traitement values(default,3,16,10000);
-insert into cout_traitement values(default,3,17,10000);
-insert into cout_traitement values(default,3,18,10000);
-insert into cout_traitement values(default,3,19,10000);
-insert into cout_traitement values(default,3,20,10000);
-insert into cout_traitement values(default,3,21,10000);
-insert into cout_traitement values(default,3,22,10000);
-insert into cout_traitement values(default,3,23,10000);
-insert into cout_traitement values(default,3,24,10000);
-insert into cout_traitement values(default,3,25,10000);
-insert into cout_traitement values(default,3,26,10000);
-insert into cout_traitement values(default,3,27,10000);
-insert into cout_traitement values(default,3,28,10000);
-insert into cout_traitement values(default,3,29,10000);
-insert into cout_traitement values(default,3,30,10000);
-insert into cout_traitement values(default,3,31,10000);
-insert into cout_traitement values(default,3,32,10000);
+insert into cout_traitement values(default,3,1,5000);
+insert into cout_traitement values(default,3,2,5000);
+insert into cout_traitement values(default,3,3,5000);
+insert into cout_traitement values(default,3,4,5000);
+insert into cout_traitement values(default,3,5,5000);
+insert into cout_traitement values(default,3,6,5000);
+insert into cout_traitement values(default,3,7,5000);
+insert into cout_traitement values(default,3,8,5000);
+insert into cout_traitement values(default,3,9,5000);
+insert into cout_traitement values(default,3,10,5000);
+insert into cout_traitement values(default,3,11,5000);
+insert into cout_traitement values(default,3,12,5000);
+insert into cout_traitement values(default,3,13,5000);
+insert into cout_traitement values(default,3,14,5000);
+insert into cout_traitement values(default,3,15,5000);
+insert into cout_traitement values(default,3,16,5000);
+insert into cout_traitement values(default,3,17,5000);
+insert into cout_traitement values(default,3,18,5000);
+insert into cout_traitement values(default,3,19,5000);
+insert into cout_traitement values(default,3,20,5000);
+insert into cout_traitement values(default,3,21,5000);
+insert into cout_traitement values(default,3,22,5000);
+insert into cout_traitement values(default,3,23,5000);
+insert into cout_traitement values(default,3,24,5000);
+insert into cout_traitement values(default,3,25,5000);
+insert into cout_traitement values(default,3,26,5000);
+insert into cout_traitement values(default,3,27,5000);
+insert into cout_traitement values(default,3,28,5000);
+insert into cout_traitement values(default,3,29,5000);
+insert into cout_traitement values(default,3,30,5000);
+insert into cout_traitement values(default,3,31,5000);
+insert into cout_traitement values(default,3,32,5000);
 
-insert into cout_traitement values(default,4,1,15000);
-insert into cout_traitement values(default,4,2,15000);
-insert into cout_traitement values(default,4,3,15000);
-insert into cout_traitement values(default,4,4,15000);
-insert into cout_traitement values(default,4,5,15000);
-insert into cout_traitement values(default,4,6,15000);
-insert into cout_traitement values(default,4,7,15000);
-insert into cout_traitement values(default,4,8,15000);
-insert into cout_traitement values(default,4,9,15000);
-insert into cout_traitement values(default,4,10,15000);
-insert into cout_traitement values(default,4,11,15000);
-insert into cout_traitement values(default,4,12,15000);
-insert into cout_traitement values(default,4,13,15000);
-insert into cout_traitement values(default,4,14,15000);
-insert into cout_traitement values(default,4,15,15000);
-insert into cout_traitement values(default,4,16,15000);
-insert into cout_traitement values(default,4,17,15000);
-insert into cout_traitement values(default,4,18,15000);
-insert into cout_traitement values(default,4,19,15000);
-insert into cout_traitement values(default,4,20,15000);
-insert into cout_traitement values(default,4,21,15000);
-insert into cout_traitement values(default,4,22,15000);
-insert into cout_traitement values(default,4,23,15000);
-insert into cout_traitement values(default,4,24,15000);
-insert into cout_traitement values(default,4,25,15000);
-insert into cout_traitement values(default,4,26,15000);
-insert into cout_traitement values(default,4,27,15000);
-insert into cout_traitement values(default,4,28,15000);
-insert into cout_traitement values(default,4,29,15000);
-insert into cout_traitement values(default,4,30,15000);
-insert into cout_traitement values(default,4,31,15000);
-insert into cout_traitement values(default,4,32,15000);
+insert into cout_traitement values(default,4,1,100000);
+insert into cout_traitement values(default,4,2,100000);
+insert into cout_traitement values(default,4,3,100000);
+insert into cout_traitement values(default,4,4,100000);
+insert into cout_traitement values(default,4,5,100000);
+insert into cout_traitement values(default,4,6,100000);
+insert into cout_traitement values(default,4,7,100000);
+insert into cout_traitement values(default,4,8,100000);
+insert into cout_traitement values(default,4,9,100000);
+insert into cout_traitement values(default,4,10,100000);
+insert into cout_traitement values(default,4,11,100000);
+insert into cout_traitement values(default,4,12,100000);
+insert into cout_traitement values(default,4,13,100000);
+insert into cout_traitement values(default,4,14,100000);
+insert into cout_traitement values(default,4,15,100000);
+insert into cout_traitement values(default,4,16,100000);
+insert into cout_traitement values(default,4,17,100000);
+insert into cout_traitement values(default,4,18,100000);
+insert into cout_traitement values(default,4,19,100000);
+insert into cout_traitement values(default,4,20,100000);
+insert into cout_traitement values(default,4,21,100000);
+insert into cout_traitement values(default,4,22,100000);
+insert into cout_traitement values(default,4,23,100000);
+insert into cout_traitement values(default,4,24,100000);
+insert into cout_traitement values(default,4,25,100000);
+insert into cout_traitement values(default,4,26,100000);
+insert into cout_traitement values(default,4,27,100000);
+insert into cout_traitement values(default,4,28,100000);
+insert into cout_traitement values(default,4,29,100000);
+insert into cout_traitement values(default,4,30,100000);
+insert into cout_traitement values(default,4,31,100000);
+insert into cout_traitement values(default,4,32,100000);
+
+delete from cout_traitement;
 
 insert into budget_patient values(1, 1, 200000, 1);
+update budget_patient set budget = 119500 where id_patient = 1;
+
+delete from budget_patient;
 
 insert into traitement_etat values(default, 0, 4);
 insert into traitement_etat values(default, 1, 3);
@@ -334,7 +341,7 @@ create view v_dent_patient as select dent_patient.id, id_patient, patient.nom, i
 
 
 update budget_patient set budget = 30000;
-
+delete from dent_patient;
 
 --lalana
 create table typeLalana(
@@ -438,13 +445,44 @@ insert into cout_traitementLalana values(default,2,14,10000);
 insert into cout_traitementLalana values(default,2,15,10000);
 insert into cout_traitementLalana values(default,2,16,10000);
 
+delete from routeLalana;
+
 insert into budget_fanja values(1, 1, 200000, 1);
+
+update budget_fanja set budget = 1000000 where id = 1;
 
 create view v_routeLalana as select routeLalana.id, id_route, route.nom, id_lalana, lalana.code, lalana.id_type_lalana, routeLalana.etat from routeLalana
     join route on route.id = routeLalana.id_route
     join lalana on lalana.id = routeLalana.id_lalana
     group by routeLalana.id, id_route, route.nom, id_lalana, lalana.code,lalana.id_type_lalana, routeLalana.etat
     order by id asc;
+
+
+create table alea(
+    id serial primary key,
+    nify varchar,
+    note varchar
+);
+
+delete from alea;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

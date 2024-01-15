@@ -117,14 +117,20 @@ public class Patient extends JDBC {
 
                 }
             }else if (etat <= 3 && etat >= 1 ){
-                double vola = budget - traiEnl;
-                System.out.println("budget manala = "+vola);
-                if(vola >= 0){
-                    budget = budget - traiEnl;         
-                    dent.update("etat", "0");
-                    budg.update("budget", String.valueOf(budget));
-                    System.out.println("budget = "+budget);
-                    
+                while(etat < 4){
+                    double vola = budget - traiEnl;
+                    System.out.println("budget manala = "+vola);
+                    if(vola >= 0){
+                        etat = etat + 1;
+                        System.out.println(" etat ="+etat);
+                        budget = budget - traiEnl;         
+                        dent.update("etat", String.valueOf(etat));
+                        budg.update("budget", String.valueOf(budget));
+                        System.out.println("budget = "+budget);
+                        
+                    }else {
+                        break;
+                    }
                 }
                 
             }else if(etat == 0 ){
